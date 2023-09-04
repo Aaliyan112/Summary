@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-widh, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https//fonts.gstatic.com" crossorigin>
+        <link href="https//fonts.googleapis.com/css2?family=roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Frontend Mentor | Results summary component</title>
+        <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+        <style>
+            .attribution {
+                font-size: 11px;
+                text-align: center;
+            }
+
+            .attribution a {
+                color: hsl(228, 45%, 44%);
+            }
+          
+body{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    place-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    justify-content: center;
+}
+.summary-divs div{
+    place-items: center;
+    border-radius: 10px;
+    margin-bottom: 0.6rem;
+    display: grid;
+    height: 3rem;
+    grid-template-columns: 1fr 2fr 4fr;
+}
+.summary-divs div:p{
+    margin-left: 1rem;
+}
+.container-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    border-radius: 2rem;
+    box-shadow: 0.1rem 0.5rem 1.5rem 1rem hsl(221, 100%, 96%);
+}
+.left-div{
+    color: white;
+    place-items: center;
+    text-align: center;
+    font-size: 0.9rem;
+    padding: 1.2rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    border-radius: 2rem;
+    min-height: 23.5rem;
+    max-width: 16rem;
+    background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+.left-div p{
+    font-size: 1rem;
+    color: hsl(241, 100%, 89%);
+}
+#last-p{
+    font-size: 0.85rem;
+    max-width: 12rem;
+    margin-left: 1.5rem;
+}
+.circle-div p{
+    position: relative;
+    bottom:1rem;
+    font-size: 0.8rem;
+    color: hsl(241, 100%, 89%);
+    
+}
+.circle-div h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 1.2rem;
+}
+.right-div{
+    place-items: center;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    border-left: 1px solid transparent;
+    border-radius: 2rem;
+    padding: 1rem;
+    padding-left: 4.5rem; 
+    padding-right: 2rem;
+    min-width: 1rem;
+    max-width: 15rem;
+    min-height: 23.7rem;
+    margin-left: -3rem; 
+}
+#cont{
+    margin-top: 1.6rem;
+    border-radius: 2rem;
+    border: 1px solid rgb(4, 4, 4);
+    justify-items: center;
+    color: rgb(9, 9, 9);
+    background-color: rgb(4, 4, 4);
+}
+#cont h4{
+    margin-left: 5.7rem;
+}
+.circle-div{
+    border-radius: 50%;
+    margin: 2rem;
+    padding: 0.7rem;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0))
+}
+#red{
+    color: hsl(0, 100%, 67%);
+}
+#yellow{
+    color: hsl(39, 100%, 56%);
+}
+#green{
+    color: hsl(166, 100%, 37%);
+}
+#blue{
+    color:  hsl(234, 85%, 45%);
+}
+span{
+    color: hsl(224, 30%, 27%);
+}
+.summary-divs p{
+    color: (4, 4, 4%);
+}
+
+@media screen and (min-width:320px) and (max-width: 420px){
+    .container-div{
+        grid-template-columns: 1fr;
+    }
+}
+
+        </style>
+    </head>
+
+    <body>
+        <div class="container-div">
+            <div class="left-div">
+                <p>Your Result</p>
+                <div class="circle-div">
+                    <h1>76</h1>
+                    <p>of 100</p>
+                </div>
+                <h2>Great</h2>
+                <p id="last-p">You scored higher than 65% of the people who have taken these tests.</p>
+            </div>
+            <div class="right-div">
+                <h2>Summary</h2>
+                <div class="summary-divs">
+                    <div style="background-color: #ffe6e6"><i id="red" class="fas fa-bolt"></i>
+                        <p id="red">Reaction</p>
+                        <p><span>80 </span>/ 100</p>
+                    </div>
+                    <div style="background-color: #fff7e6;"><i id="yellow" class="far fa-clock"></i>
+                        <p id="yellow">Memory</p>
+                        <p><span>92 </span>/ 100</p>
+                    </div>
+                    <div style="background-color:  #e6fff9;"><i id="green" class="far fa-comment"></i>
+                        <p id="green">Verbal</p>
+                        <p><span>61 </span> / 100</p>
+                    </div>
+                    <div style="background-color: #e6ecff;"><i id="blue" class="far fa-eye"></i>
+                        <p id=blue>Visual</p>
+                        <p><span>72 </span> / 100</p>
+                    </div>
+                    <div id="cont">
+                        <h4 id="c"><Button class="btn-1">Button</Button></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </head>
+
+    </body>
+
+</html>
